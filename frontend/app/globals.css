@@ -1,0 +1,752 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #090d14;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #151d2d 0%,
+      #090d14 45%
+    );
+
+  color: #e5e7eb;
+
+  min-height: 100vh;
+}
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  padding: 55px 24px 80px;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 35px;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #1f2937;
+
+  border: 1px solid #374151;
+
+  color: #f9fafb;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: 30px;
+
+  letter-spacing: -0.5px;
+
+  color: #f9fafb;
+}
+
+.header p {
+  margin: 5px 0 0;
+
+  color: #8b95a7;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   INPUT
+======================================== */
+
+.input-section {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 30px;
+}
+
+.input-section input {
+  flex: 1;
+
+  height: 52px;
+
+  padding: 0 17px;
+
+  background: #111722;
+
+  border: 1px solid #303949;
+
+  border-radius: 9px;
+
+  color: #f9fafb;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: border 0.2s;
+}
+
+.input-section input::placeholder {
+  color: #667085;
+}
+
+.input-section input:focus {
+  border-color: #64748b;
+}
+
+.input-section button {
+  height: 52px;
+
+  padding: 0 25px;
+
+  border: 1px solid #475569;
+
+  border-radius: 9px;
+
+  background: #e5e7eb;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.input-section button:hover {
+  background: #ffffff;
+}
+
+.input-section button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+   ERROR
+======================================== */
+
+.error {
+  padding: 15px 18px;
+
+  margin-bottom: 25px;
+
+  border-radius: 9px;
+
+  background: #2a1518;
+
+  border: 1px solid #64252c;
+
+  color: #fca5a5;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   LOADING
+======================================== */
+
+.loading {
+  padding: 60px 30px;
+
+  text-align: center;
+
+  background: #101620;
+
+  border: 1px solid #273142;
+
+  border-radius: 12px;
+}
+
+.spinner {
+  width: 34px;
+  height: 34px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  border: 3px solid #273142;
+
+  border-top-color: #e5e7eb;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading h3 {
+  margin-bottom: 8px;
+
+  color: #f9fafb;
+}
+
+.loading p {
+  margin: 0 0 8px;
+
+  color: #9ca3af;
+}
+
+.loading span {
+  color: #667085;
+
+  font-size: 13px;
+}
+
+
+/* ========================================
+   REPORT CARD
+======================================== */
+
+.report-card {
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #151c29,
+      #0f141d
+    );
+
+  border: 1px solid #303a4b;
+
+  border-radius: 14px;
+
+  margin-bottom: 42px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.report-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #7d899d;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.report-header h2,
+.issues-header h2 {
+  margin: 0;
+
+  color: #f9fafb;
+
+  font-size: 22px;
+}
+
+.status-badge {
+  padding: 8px 14px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+.status-fail {
+  background: #35191d;
+
+  border: 1px solid #713039;
+
+  color: #fca5a5;
+}
+
+.status-pass {
+  background: #142b20;
+
+  border: 1px solid #285a42;
+
+  color: #86efac;
+}
+
+.report-text {
+  margin: 0;
+
+  max-width: 850px;
+
+  color: #c2c9d4;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+.report-meta {
+  display: flex;
+
+  gap: 25px;
+
+  margin-top: 25px;
+
+  padding-top: 17px;
+
+  border-top: 1px solid #252e3d;
+
+  color: #697586;
+
+  font-size: 11px;
+}
+
+
+/* ========================================
+   ISSUES HEADER
+======================================== */
+
+.issues-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-bottom: 16px;
+}
+
+.issue-count {
+  padding: 6px 11px;
+
+  background: #161d28;
+
+  border: 1px solid #303949;
+
+  border-radius: 6px;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* ========================================
+   ISSUE CARD
+======================================== */
+
+.issue-card {
+  margin-bottom: 10px;
+
+  background: #101620;
+
+  border: 1px solid #293343;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.issue-card:hover {
+  border-color: #414d60;
+}
+
+.issue-card.issue-open {
+  border-color: #4b5563;
+
+  background: #121923;
+}
+
+
+/* ========================================
+   ISSUE HEADER BUTTON
+======================================== */
+
+.issue-header {
+  width: 100%;
+
+  min-height: 74px;
+
+  padding: 15px 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  border: none;
+
+  background: transparent;
+
+  color: inherit;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.issue-number {
+  min-width: 35px;
+
+  color: #566174;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.issue-title {
+  flex: 1;
+}
+
+.issue-title h3 {
+  margin: 0 0 5px;
+
+  color: #e5e7eb;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+.issue-title span {
+  color: #687487;
+
+  font-size: 11px;
+}
+
+.arrow {
+  width: 25px;
+
+  color: #788497;
+
+  font-size: 20px;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   SEVERITY
+======================================== */
+
+.severity {
+  padding: 5px 9px;
+
+  border-radius: 5px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.6px;
+}
+
+.severity.critical {
+  background: #4a171b;
+
+  color: #fca5a5;
+
+  border: 1px solid #76272e;
+}
+
+.severity.high {
+  background: #3b1d1b;
+
+  color: #fdba74;
+
+  border: 1px solid #70402b;
+}
+
+.severity.medium {
+  background: #352d17;
+
+  color: #fcd34d;
+
+  border: 1px solid #665522;
+}
+
+.severity.low {
+  background: #182b38;
+
+  color: #93c5fd;
+
+  border: 1px solid #294a61;
+}
+
+
+/* ========================================
+   ISSUE DETAILS
+======================================== */
+
+.issue-details {
+  padding: 5px 25px 23px 68px;
+
+  border-top: 1px solid #252e3d;
+}
+
+.detail-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 22px;
+
+  padding-top: 22px;
+}
+
+.detail-block {
+  padding: 17px;
+
+  background: #0c1119;
+
+  border: 1px solid #222b39;
+
+  border-radius: 8px;
+}
+
+.detail-label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #667085;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.detail-block p {
+  margin: 0;
+
+  color: #b8c0cc;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+.recommendation {
+  border-left: 2px solid #64748b;
+}
+
+
+/* ========================================
+   ISSUE FOOTER
+======================================== */
+
+.issue-footer {
+  display: flex;
+
+  gap: 45px;
+
+  margin-top: 20px;
+
+  padding-top: 17px;
+
+  border-top: 1px solid #252e3d;
+}
+
+.issue-footer div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.issue-footer span {
+  color: #667085;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.issue-footer strong {
+  color: #cbd5e1;
+
+  font-size: 12px;
+}
+
+
+/* ========================================
+   NO RESULTS
+======================================== */
+
+.no-results {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 22px;
+
+  background: #101b17;
+
+  border: 1px solid #234534;
+
+  border-radius: 10px;
+
+  color: #a7f3d0;
+}
+
+.success-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #173526;
+
+  color: #86efac;
+
+  font-weight: bold;
+}
+
+.no-results p {
+  margin: 4px 0 0;
+
+  color: #718579;
+
+  font-size: 13px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .container {
+    padding: 35px 15px 60px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .input-section button {
+    width: 100%;
+  }
+
+  .report-card {
+    padding: 20px;
+  }
+
+  .report-header {
+    gap: 15px;
+
+    flex-direction: column;
+  }
+
+  .report-meta {
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+  .issue-header {
+    gap: 9px;
+
+    padding: 14px;
+  }
+
+  .issue-number {
+    display: none;
+  }
+
+  .issue-details {
+    padding: 5px 15px 20px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .severity {
+    font-size: 9px;
+  }
+
+}
