@@ -3,6 +3,9 @@
 > AI-powered compliance auditing for YouTube advertisements — detecting potential policy violations, misleading claims, and brand risks with evidence and timestamps.
 
 ---
+Architecture:
+<img width="1323" height="735" alt="image" src="https://github.com/user-attachments/assets/e8d1a2f4-541c-466c-84c3-19e6e403489e" />
+
 
 ##  Overview
 
